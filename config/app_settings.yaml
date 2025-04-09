@@ -1,0 +1,56 @@
+# 权限控制
+access_control:
+  # 管理员ID，私聊不受黑白名单限制
+  admin_id: [1985489768]
+  # 群聊黑白名单，默认拒绝所有群聊
+  group:
+    enable_whitelist: true
+    whitelist: [216295809]
+    blacklist: []
+  # 私聊黑白名单，默认允许所有私聊
+  user:
+    enable_whitelist: true
+    whitelist: [
+      3459326474, 
+      1627740412,
+      1837870899,
+      3602810771,
+      3378744217,
+      3427436390
+    ]
+    blacklist: []
+
+# 会话配置
+session:
+  valid_message_types: [text, mface, image]  # 有效消息类型，默认仅"text"，session会忽略其他类型的消息
+  max_history: 10  # 最大历史记录数
+
+# 模型提示词配置
+query_build:
+  system: 
+    group_chat: qq_group_chat.yaml
+    private_chat: qq_private_chat.yaml
+  character: kanade.yaml
+
+# 大模型接口配置
+llm_api:
+  api_url: https://openrouter.ai/api/v1/chat/completions
+  api_key: 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
+  model: google/gemma-3-27b-it
+  timeout: 60  # 单位：秒
+  max_retries: 3  # 最大重试次数
+
+# 模型超参数配置
+model_hyperparameters:
+  temperature: 0.7  # Range: [0, 2]
+  max_tokens: 2048  # Range: [1, context_length)
+  # seed: number # Integer only
+  # top_p: number # Range: (0, 1]
+  # top_k: number # Range: [1, Infinity) Not available for OpenAI models
+  # frequency_penalty: number # Range: [-2, 2]
+  # presence_penalty: number # Range: [-2, 2]
+  # repetition_penalty: number # Range: (0, 2]
+  # logit_bias: { [key: number]: number }
+  # top_logprobs: number # Integer only
+  # min_p: number # Range: [0, 1]
+  # top_a: number # Range: [0, 1]

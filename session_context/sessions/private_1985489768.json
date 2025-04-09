@@ -1,0 +1,30 @@
+{
+  "session_id": 1985489768,
+  "session_type": "private",
+  "self_id": 1265287884,
+  "max_histories": 10,
+  "messages": [
+    {
+      "user_name": "默沉",
+      "user_id": 1985489768,
+      "time": "2025-03-31 23:49:04",
+      "message": [
+        {
+          "type": "text",
+          "text": "你好"
+        }
+      ]
+    },
+    {
+      "user_name": "宵崎奏",
+      "user_id": "1265287884",
+      "time": "2025-03-31 23:48:36",
+      "message": [
+        {
+          "type": "text",
+          "text": "诶？你好呀… 是谁呢？(・ω・)ノ"
+        }
+      ]
+    }
+  ]
+}
